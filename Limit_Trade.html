@@ -1,0 +1,763 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	 <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<!--Responsive-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--SEO Start-->
+<title>Suvarnasiddhi| Limit Trade </title>
+<meta name="description" content="Suvarnasiddhi Buy, Sell, and Delivery Gold">
+<meta name="robots" content="">
+<meta name="author" content="">
+<!-- Common Meta Tags for Geo Region, Place and Latitude and Longitude. Malad retail outlet -->
+<meta name="geo.region" content="India">
+<meta name="geo.placename" content="Pune">
+<meta name="geo.position" content="#">
+<meta name="ICBM" content="#">
+<!--SEO END-->
+
+<!--Android Address bar Color-->
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#0e0c0b">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#0e0c0b">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#0e0c0b">
+
+<link rel="shortcut icon" type="image/x-icon" href="assets/images/ssLogo.png">
+<!-- Bootstrap Core CSS-->
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom CSS-->
+<link href="assets/css/universal.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="assets/css/component.css">
+<link rel="stylesheet" type="text/css" href="assets/css/animate.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+<link href="assets/css/suvarnasiddhi.css" rel="stylesheet" type="text/css">
+<link href="assets/css/jquery.toast.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="assets/fonts/flaticon.css">
+<link href="css.css?family=Montserrat:400,700" rel="stylesheet">
+<link href="assets/css/select2.min.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="assets/css/dataTables.bootstrap.min.css">
+ 
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+      
+  
+<!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-P5LDN3J');
+            
+  var BASE_URL='http://www.suvarnasiddhi.com/';
+  </script>
+  <!-- End Google Tag Manager -->
+
+  </head>	<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="top" ng-controller="MainCtrl">
+   <!-- Loader -->
+	<!--<div id="preloader">
+  <div id="status"></div>
+</div>-->
+<header> 
+  <!-- Navigation-->
+  <nav class="navbar navbar-universal navbar-custom navbar-fixed-top"> <!-- Navigation-->
+<div class="container">
+         <div class="rate_fixed_header" id="without_refresh_get">
+        <span class="buy_rates"> Gold Buy <i class="fa fa-inr"></i> 5069.80 gm </span>
+        <span class="sell_rates"> Gold Sell <i class="fa fa-inr"></i> 4562.82 gm </span>
+    </div>
+  <div class="navbar-header">
+    <button type="button" data-toggle="collapse" data-target=".navbar-main-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+    
+    <a style="font-size:24px;" href="index.htm" class="navbar-brand">
+    <!-- Text or Image logo-->
+    
+    <img src="assets/images/sslogo2.png" alt="suvarnasiddhi" class="logo">
+    <img src="assets/images/sslogo2.png" alt="suvarnasiddhi" class="logodark">
+    </a>
+        </div>
+  <div class="collapse navbar-collapse navbar-main-collapse">
+    <ul class="nav navbar-nav navbar-left">
+        <li class="hidden"><a href="index.htm#page-top"></a></li> 
+        <li><a href="#">About Us</a></li>
+        <!--<li><a href="partner-with-us.html">Partner With Us</a></li>-->
+      <!--  <li><a href="#">Join Us</a></li>-->
+        <li class="menu-divider visible-lg">&nbsp;</li>
+
+          
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+               
+                  </ul>
+  </div>
+ 
+</div>
+ </nav>
+</header> 
+<style>
+    .header_cover{
+    background: url(10.jpg);
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(7, 7, 7, 0.7); 
+  }
+</style>
+
+ 
+<div id="fixed_deposit" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">GOLD FIXED DEPOSIT</h4>
+      </div>
+      <div class="modal-body">
+          <div class="alert alert-success" id="fixed_deposit_success" style="display:none;"></div>
+          <div class="alert alert-danger" id="fixed_deposit_error" style="display:none;"></div>
+            <p class="wallets_csss">
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Notice</p>
+<p>Message:  Undefined variable: id</p>
+<p>Filename: layout/header.php</p>
+<p>Line Number: 80</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/i6vbmtrcw922/public_html/suvarnasiddhi.com/application/views/users/layout/header.php<br>
+			Line: 80<br>
+			Function: _error_handler			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/i6vbmtrcw922/public_html/suvarnasiddhi.com/application/views/users/layout/layout.php<br>
+			Line: 6<br>
+			Function: view			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/i6vbmtrcw922/public_html/suvarnasiddhi.com/application/core/MY_Controller.php<br>
+			Line: 14<br>
+			Function: view			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/i6vbmtrcw922/public_html/suvarnasiddhi.com/application/controllers/Users_controller.php<br>
+			Line: 59<br>
+			Function: layout_users			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/i6vbmtrcw922/public_html/suvarnasiddhi.com/index.php<br>
+			Line: 315<br>
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Notice</p>
+<p>Message:  Trying to get property 'GOLD_BALANCE' of non-object</p>
+<p>Filename: layout/header.php</p>
+<p>Line Number: 80</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/i6vbmtrcw922/public_html/suvarnasiddhi.com/application/views/users/layout/header.php<br>
+			Line: 80<br>
+			Function: _error_handler			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/i6vbmtrcw922/public_html/suvarnasiddhi.com/application/views/users/layout/layout.php<br>
+			Line: 6<br>
+			Function: view			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/i6vbmtrcw922/public_html/suvarnasiddhi.com/application/core/MY_Controller.php<br>
+			Line: 14<br>
+			Function: view			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/i6vbmtrcw922/public_html/suvarnasiddhi.com/application/controllers/Users_controller.php<br>
+			Line: 59<br>
+			Function: layout_users			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/i6vbmtrcw922/public_html/suvarnasiddhi.com/index.php<br>
+			Line: 315<br>
+			Function: require_once			</p>
+
+		
+	
+
+</div><br><b>GOLD WALLET</b> 
+            <form method="post" id="fixed_deposit_inr_forms">
+              <div class="form-group">
+                  <label>Gold Amount</label>  
+                  <input type="number" id="gold_amount_fixed" class="form-control" name="gold_amount_fixed" value="Gold Amount">
+              </div> 
+               <div class="form-group">
+                  <label>Select Fixed Deposit Duration</label>   
+                  <select id="fixed_deposit_duration" name="fixed_deposit_duration" class="form-control">
+                      <option value="">Select Duration</option>
+                      <option value="6">6 Months 6% Interest</option> 
+                      <option value="9">9 Months 13.5% Interest</option> 
+                      <option value="12">12 Months 24% Interest</option>   
+                  </select>
+              </div>  
+              <div class="form-group">
+                  <button type="submit" name="sub" id="submit_fixed_deposit" class="btn btn-primary btn-block">  Submit Fixed Deposit </button>
+              </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5cdaa9e2d07d7e0c6393835d/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>	 <!--<div class="web-banner">
+<div data-background="assets/images/caratlane/white-bg2.jpg" class="sections intro banner">
+<div class="container text-center">
+<a href="caratlane.html"> <img src="assets/images/caratlane/safegold-caratlane-banner.png" class="hidden-xs"> <img src="assets/images/caratlane/safegold-caratlane-banner-mobile.png" class="img-responsive visible-xs"></a><br>
+</div> </div>
+</div>-->
+<style>
+    .nav-tabs>li>a {
+    margin-right: 24px;}
+</style>
+<header id="banner" class="intro bg-dark header_cover">
+  <!-- Intro Header-->
+  <div class="container">
+    <!-- Intro Header-->
+
+    <div class="banner-content">
+      <div class="row">
+        <div class="banner-title text-center">
+          <h1 data-wow-delay=".4s" class="wow fadeInDown" style="margin-bottom:5px;">Limit Order Gold Buy Sell <i class="fa fa-inr"></i> 1. </h1>
+          <h3 class="wow fadeInUp">A safe and simple way to accumulate gold.</h3>
+        </div>
+        <div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-0">
+                        <div class="buy-sell-box text-center"> 
+            <!-- Nav tabs-->
+            <div align="center" style="margin-left: 133px;">
+            <ul role="tablist" id="mytrans" class=" side-box nav nav-tabs hi-icon-wrap hi-icon-effect-8">
+                <li role="presentation" class="active"><a href="#" id="buy_anchor" aria-controls="buy" role="tab" data-toggle="tab"> <span class="hi-icon flaticon-cart-6"></span> <br>
+                Buy Limit</a></li>
+                <li role="presentation"><a aria-controls="sell" role="tab" id="sell_anchor" data-toggle="tab" href="#"><span class="hi-icon flaticon-get-money"></span><br>
+                Sell Limit</a></li>
+            </ul>
+            </div>
+            <!-- Tab panes-->
+            <div class="tab-content">
+                                <div id="buy" role="tabpanel" class="tab-pane fade in active">
+                                     <form class="dark-form" id="buy_glod_trade_limit" method="post">
+                <div class="row">
+                  <div class="col-sm-4"> 
+                    <div class="form-group floating-label-form-group controls">
+                      <label>Limit Buy Price </label>
+                      <input type="text" name="Base_buy_Amount" value="5069.80" autocomplete="off" id="Base_buy_Amount" onkeyup="getequivalentto_Buy_Limit('BASE')" onmouseup="getequivalentto_Buy_Limit('BASE')" class="form-control input-lg number" placeholder="Price (INR)" numbers-only="" required="" id="buy_amount_in_rs">
+                       </div>
+                  </div>
+                 <div class="col-sm-4"> 
+                    <div class="form-group floating-label-form-group controls">
+                      <label>Buy in gram Limit </label>
+                      <input type="text" name="Buy_weight_Gold" autocomplete="off" id="Buy_weight_Gold" onkeyup="getequivalentto_Buy_Limit('GOLD')" onmouseup="getequivalentto_Buy_Limit('GOLD')" class="form-control input-lg number" placeholder="Buy in gram" numbers-only="" required="" id="buy_amount_in_rs">
+                       </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls">
+                        <label>Total INR Limit</label>
+                        <input type="text" name="Buy_Total_INR" autocomplete="off" id="Buy_Total_INR" onkeyup="getequivalentto_Buy_Limit('INR')" onmouseup="getequivalentto_Buy_Limit('INR')" class="form-control input-lg number" placeholder="Total INR" float-only-for-gm="" required="" id="buy_amount_in_gm">
+                       
+                      </div>
+                    </div>
+                  </div>
+                    <span class="text-danger" id="error_INR_calculator_buy"></span>
+                </div>
+                <div class="control-group"> </div>
+                               <a href="login.html" class="btn btn-lg btn-gold">Buy Place Order</a>
+                             </form>
+              </div>
+              <div id="sell" role="tabpanel" class="tab-pane fade in">
+                                        <form class="dark-form" id="sell_glod_trade_limit" method="post">
+                <div class="row">
+                  <div class="col-sm-4"> 
+                    <div class="form-group floating-label-form-group controls">
+                      <label>Price INR <span class="fa fa-inr"></span></label>
+                      <input type="text" name="Base_sell_Amount" value="4562.82" autocomplete="off" id="Base_sell_Amount" onkeyup="getequivalentto_Sell_Limit('BASE')" onmouseup="getequivalentto_Buy('BASE')" class="form-control input-lg number" placeholder="Price (INR)" numbers-only="" required="" id="buy_amount_in_rs">
+                       </div>
+                  </div>
+                 <div class="col-sm-4"> 
+                    <div class="form-group floating-label-form-group controls">
+                      <label>Sell in gram </label>
+                      <input type="text" name="Sell_weight_Gold" autocomplete="off" id="Sell_weight_Gold" onkeyup="getequivalentto_Sell_Limit('GOLD')" onmouseup="getequivalentto_Sell('GOLD')" class="form-control input-lg number" placeholder="Sell in gram" numbers-only="" required="" id="buy_amount_in_rs">
+                       </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls">
+                        <label>Total INR</label>
+                        <input type="text" name="Sell_Total_INR" autocomplete="off" id="Sell_Total_INR" onkeyup="getequivalentto_Sell_Limit('INR')" onmouseup="getequivalentto_Sell('INR')" class="form-control input-lg number" placeholder="Total INR" float-only-for-gm="" required="" id="buy_amount_in_gm">
+                       
+                      </div>
+                    </div>
+                  </div>
+                    <span class="text-danger" id="error_INR_calculator_sell"></span>
+                </div>
+                <div class="control-group"> </div>
+                               <a href="login.html" class="btn btn-lg btn-gold">Sell Place Order</a>
+                             </form>
+              </div>
+              <div id="delivery" role="tabpanel" class="tab-pane fade in">
+                    <div class="otter-box">
+                    
+                <div class="current-price"> <span class="fa fa-inr"></span>
+                  <h5 style="display:inline" class="ng-binding">5069.80/gm</h5>
+                  <small style="display:block"> Gold Buy Price</small> 
+                </div>
+                <!--<div class="bal">
+                  <h5 style="display:inline" class="ng-binding">0.0000 gm </h5>
+                  <small style="display:block"> Your Gold Balance </small> 
+                </div>-->
+                <div class="clearfix"></div>
+              </div>
+                <form name="sellGoldForm" class="dark-form">
+                <div class="row">
+                  <div class="col-sm-5">
+                    <div class="form-group floating-label-form-group controls">
+                      <label>Delivery in <span class="fa fa-inr"></span></label>
+                      <input type="text" name="amountRs_Delivery" id="amountRs_Delivery" onkeyup="getequivalentto_delivery('INR')" onmouseup="getequivalentto_delivery('INR')" class="form-control input-lg" placeholder="Enter Rs." numbers-only="" required="">
+                       </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <p class="or">OR</p>
+                  </div>
+                  <div class="col-sm-5">
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls">
+                        <label>Delivery in gram</label>
+                        <input type="text" name="amountGm_Delivery" id="amountGm_Delivery" onkeyup="getequivalentto_delivery('GOLD')" onmouseup="getequivalentto_delivery('GOLD')" class="form-control input-lg" placeholder="Enter gram " float-only-for-gm="" required="">
+                       
+                      </div>
+                    </div>
+                  </div>
+                    <span class="text-danger" id="error_Delivery_calculator"></span>
+                </div>
+                <div class="control-group"> </div>
+                <button type="submit" class="btn btn-lg btn-gold" id="sell_submit_form">Delivery Now</button>
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-md-offset-0 col-sm-12">
+          <div id="Carousel-intro" data-ride="carousel" class=" carousel slide carousel-fade">
+            <!-- <ol class="carousel-indicators">
+            <li data-target="#Carousel-intro" data-slide-to="0" class="active"></li>
+          </ol>-->
+            <div class="carousel-inner">
+              <div class="item active">
+                <div class="row hi-icon-wrap hi-icon-effect-2 hi-icon-effect-2a feature-icon-container">
+                  <!--<div class=" col-xs-12  col-md-1 col-sm-1"> <span data-wow-delay=".4s"  class=" wow fadeInLeft hi-icon big-icon flaticon-rich"></span></div>
+                  <!--<div class=" col-xs-12  col-md-11 col-sm-5">
+                    <div  data-wow-delay=".4s" class="wow fadeInLeft feature-text feature-icon-box">
+                      <h5>Trusted</h5>
+                      <p>We’ve partnered with IDBI Trusteeship Services, so you can be sure that we will always keep your interest at heart. </p>
+                    </div>
+                  </div>-->
+                  <div class="col-xs-12  col-md-1 col-sm-1"><span data-wow-delay=".6s" class=" wow fadeInLeft  hi-icon   big-icon flaticon-safebox-3"></span></div>
+                  <div class="col-xs-12  col-md-11 col-sm-5">
+                    <div data-wow-delay=".6s" class="wow fadeInLeft feature-text feature-icon-box">
+                      <h5>Safe</h5>
+                      <p>All our gold is safely stored in a Brink’s vault - the global leaders in gold custody services.</p>
+                    </div>
+                  </div>
+                    <div class="clearfix"></div>
+                  <div class="col-xs-12  col-md-1 col-sm-1"><span data-wow-delay=".8s" class=" wow fadeInLeft  hi-icon  big-icon flaticon-money"></span></div>
+                  <div class="col-xs-12  col-md-11 col-sm-5">
+                    <div data-wow-delay=".8s" class="wow fadeInLeft feature-text feature-icon-box">
+                      <h5>Liquid</h5>
+                      <p>Sell your gold with one click, from anywhere and at anytime. </p>
+                    </div>
+                  </div>
+                  <div class="col-xs-12  col-md-1 col-sm-1"><span data-wow-delay="1s" class=" wow fadeInLeft  hi-icon  big-icon flaticon-delivery-cart-1"></span></div>
+                  <div class="col-xs-12  col-md-11 col-sm-5">
+                    <div data-wow-delay="1s" class="wow fadeInLeft feature-text feature-icon-box">
+                      <h5>Deliverable</h5>
+                      <p>Have your gold delivered to your doorstep with full insurance cover, whenever you choose. </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Controls--><!--<a href="#Carousel-intro" data-slide="prev" class="left carousel-control"><span class="glyphicon glyphicon-chevron-left"></span></a><a href="index.html#Carousel-intro" data-slide="next" class="right carousel-control"><span class="glyphicon glyphicon-chevron-right"></span></a>--> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="clearfix"></div>
+	  <footer> 
+  <!-- footer small-->
+  <div class=" footer-small bg-dark text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <p data-wow-iteration="999" data-wow-duration="3s" class="wow flash"><a href="#page-top" class="page-scroll"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></a></p>
+          <p style="text-align:center">
+              <img src="assets/images/sslogo2.png" alt="safeGold-logo" width="180" style="height: 88px;width: 80px;" class="logo">
+        <!-- SUVARNASIDDHI-->
+            </p>
+          <hr>
+          <ul class="list-inline">
+                <li><a href="contact-us.html">Contact US</a></li>
+              <li style="border:0px"><a href="privacy-policy.html">PRIVACY POLICY </a></li>
+              <li><a href="refund-policy.html"> REFUND POLICY </a></li>
+           
+              <li><a href="terms-of-use.html"> TERMS OF USE </a></li>
+              <li><a href="faq.html"> FAQ </a></li>
+            <!--<li><a href="#"> SITEMAP </a></li>-->
+          </ul>
+           <ul class="list-inline">
+               <li style="border-left: none;" class="facebook-social"><a href="suvarnasiddhi/index.htm" target="_blank"><i style="color:white;" class="fa fa-facebook"></i> </a></li>  
+               <li style="border-left: none;" class="twitters"><a href="https://twitter.com/suvarnasiddhi" target="_blank"><i style="color:white;" class="fa fa-twitter"></i> </a></li>  
+               <li style="border-left: none;" class="instragram"><a href="suvarnasiddhi/index-1.htm" target="_blank"><i style="color:white;" class="fa fa-instagram"></i> </a></li>  
+               
+          </ul>
+          <p class="small" style="margin-bottom:5px">Product By SUVARNASANKALP PRIVATE LIMITED</p>
+         
+        </div>
+      </div>
+    <!--  <div class="row patner-list">
+          <div class="col-xs-6 text-center"><img src="http://www.suvarnasiddhi.com/assets/images/logos/idbi.png" alt="SafeGold-IDBI" width="150" height="43"></div>
+        <div class="col-xs-6 text-center"><img src="http://www.suvarnasiddhi.com/assets/images/logos/brinks.png" alt="SafeGold-BRINKS " width="150" height="43"></div>
+        
+      </div>-->
+    </div>
+  </div>
+</footer>
+ 
+<!--footer end--> 
+<!-- jQuery--> 
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="assets/js/jquery.min.js"></script>
+ <script src="assets/js/jquery-ui.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bost/jquery.dataTables.min.js"></script>
+<script src="assets/js/bost/dataTables.bootstrap4.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!-- Plugin JavaScript--> 
+<script src="assets/js/jquery.validate.min.js" type="text/javascript"></script>
+<script src="assets/js/additional-methods.min.js" type="text/javascript"></script>
+<script src="assets/js/main.js" type="text/javascript"></script>
+<script src="assets/js/device.min.js" defer=""></script>  
+
+<script src="assets/js/wow.min.js"></script> 
+<script src="assets/js/universal.js"></script> 
+<script src="assets/js/select2.min.js" defer=""></script>
+<script src="assets/js/sweetalert.min.js" defer=""></script>
+
+<script src="assets/js/jquery.smartmenus.js" async=""></script>
+<!--<script src="/assets/js/jquery.easing.min.js" defer></script>--> 
+<script src="assets/js/jquery.shuffle.min.js"></script> 
+<!--<script src="/assets/js/jquery.placeholder.min.js"></script>-->
+<!--<script src="/assets/js/jquery.swipebox.min.js"></script> -->
+<!-- <script src="/assets/js/smoothscroll.min.js"></script> -->
+<!--<script src="/assets/js/jquery.parallax.min.js"></script> -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b02a6de899","applicationID":"98372222","transactionName":"blQGMEdQVhEABxcLX1ceJQdBWFcMTiwMD1V6XgoQR15UDgQWIwVVTX0FClFYVgUxBQQH","queueTime":0,"applicationTime":24,"atts":"QhMFRg9KRR8=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<script>
+   // var j = jQuery.noConflict();  
+           var maxBirthdayDate = new Date();
+maxBirthdayDate.setFullYear( maxBirthdayDate.getFullYear() - 10,11,31)
+    $(document).ready(function() {
+    $("#CRATED_DATE_NFT").datepicker({
+        changeMonth: true, 
+       changeYear: true
+       
+    });
+  });
+
+</script>
+
+<script>
+var table;
+$(document).ready(function() {
+    table = $('#deposit_INR_History').DataTable({ 
+	"pageLength": 50,
+	"bLengthChange": false,
+        "processing": true, //Feature control the processing indicator.
+        "serverSide": true, //Feature control DataTables' server-side processing mode.
+        "order": [], //Initial no order.
+        // Load data for the table's content from an Ajax source
+        "ajax": {
+            "url": "http://www.suvarnasiddhi.com/Datatables_Controller/buy_trnasction_history",
+            "type": "POST"
+        },
+        //Set column definition initialisation properties.
+        "columnDefs": [{ 
+            "targets": [ 0 ], //first column / numbering column
+            "orderable": false, //set not orderable
+        },
+        ],
+ 
+    });
+ 
+});
+
+$(document).ready(function() {
+    table = $('#trade_buy_history').DataTable({ 
+	"pageLength": 50,
+	"bLengthChange": false,
+        "processing": true, //Feature control the processing indicator.
+        "serverSide": true, //Feature control DataTables' server-side processing mode.
+        "order": [], //Initial no order.
+        // Load data for the table's content from an Ajax source
+        "ajax": {
+            "url": "http://www.suvarnasiddhi.com/Datatables_Controller/trade_trnasction_history_buy",
+            "type": "POST"
+        },
+        //Set column definition initialisation properties.
+        "columnDefs": [{ 
+            "targets": [ 0 ], //first column / numbering column
+            "orderable": false, //set not orderable
+        },
+        ],
+ 
+    });
+
+table = $('#trade_sell_history').DataTable({ 
+	"pageLength": 50,
+	"bLengthChange": false,
+        "processing": true, //Feature control the processing indicator.
+        "serverSide": true, //Feature control DataTables' server-side processing mode.
+        "order": [], //Initial no order.
+        // Load data for the table's content from an Ajax source
+        "ajax": {
+            "url": "http://www.suvarnasiddhi.com/Datatables_Controller/trade_trnasction_history_sell",
+            "type": "POST"
+        },
+        //Set column definition initialisation properties.
+        "columnDefs": [{ 
+            "targets": [ 0 ], //first column / numbering column
+            "orderable": false, //set not orderable
+        },
+        ],
+ 
+    });
+
+
+table = $('#withdraws_historys').DataTable({ 
+	"pageLength": 50,
+	"bLengthChange": false,
+        "processing": true, //Feature control the processing indicator.
+        "serverSide": true, //Feature control DataTables' server-side processing mode.
+        "order": [], //Initial no order.
+        // Load data for the table's content from an Ajax source
+        "ajax": {
+            "url": "http://www.suvarnasiddhi.com/Datatables_Controller/withdraws_trnasction_history",
+            "type": "POST"
+        },
+        //Set column definition initialisation properties.
+        "columnDefs": [{ 
+            "targets": [ 0 ], //first column / numbering column
+            "orderable": false, //set not orderable
+        },
+        ],
+ 
+    });
+
+table = $('#referral_users_lists').DataTable({ 
+	"pageLength": 50,
+	"bLengthChange": false,
+        "processing": true, //Feature control the processing indicator.
+        "serverSide": true, //Feature control DataTables' server-side processing mode.
+        "order": [], //Initial no order.
+        // Load data for the table's content from an Ajax source
+        "ajax": {
+            "url": "http://www.suvarnasiddhi.com/Datatables_Controller/referral_users_list",
+            "type": "POST"
+        },
+        //Set column definition initialisation properties.
+        "columnDefs": [{ 
+            "targets": [ 0 ], //first column / numbering column
+            "orderable": false, //set not orderable
+        },
+        ],
+ 
+    });
+
+table = $('#referral_income_tables').DataTable({ 
+	"pageLength": 50,
+	"bLengthChange": false,
+        "processing": true, //Feature control the processing indicator.
+        "serverSide": true, //Feature control DataTables' server-side processing mode.
+        "order": [], //Initial no order.
+        // Load data for the table's content from an Ajax source
+        "ajax": {
+            "url": "http://www.suvarnasiddhi.com/Datatables_Controller/referral_income_users",
+            "type": "POST"
+            },
+        //Set column definition initialisation properties.
+        "columnDefs": [{ 
+            "targets": [ 0 ], //first column / numbering column
+            "orderable": false, //set not orderable
+        },
+        ],
+ 
+    });
+
+table = $('#fixed_deposit_table').DataTable({ 
+	"pageLength": 50,
+	"bLengthChange": false,
+        "processing": true, //Feature control the processing indicator.
+        "serverSide": true, //Feature control DataTables' server-side processing mode.
+        "order": [], //Initial no order.
+        // Load data for the table's content from an Ajax source
+        "ajax": {
+            "url": "http://www.suvarnasiddhi.com/Datatables_Controller/fixed_deposit_history_shwing",
+            "type": "POST"
+            },
+        //Set column definition initialisation properties.
+        "columnDefs": [{ 
+            "targets": [ 0 ], //first column / numbering column
+            "orderable": false, //set not orderable
+        },
+        ],
+ 
+    });
+
+
+
+table = $('#gold_payout_amount').DataTable({ 
+	"pageLength": 50,
+	"bLengthChange": false,
+        "processing": true, //Feature control the processing indicator.
+        "serverSide": true, //Feature control DataTables' server-side processing mode.
+        "order": [], //Initial no order.
+        // Load data for the table's content from an Ajax source
+        "ajax": {
+            "url": "http://www.suvarnasiddhi.com/Datatables_Controller/fixed_deposit_payout_paging",
+            "type": "POST"
+            },
+        //Set column definition initialisation properties.
+        "columnDefs": [{ 
+            "targets": [ 0 ], //first column / numbering column
+            "orderable": false, //set not orderable
+        },
+        ],
+ 
+    });
+
+table = $('#delivery_page_table').DataTable({ 
+	"pageLength": 50,
+	"bLengthChange": false,
+        "processing": true, //Feature control the processing indicator.
+        "serverSide": true, //Feature control DataTables' server-side processing mode.
+        "order": [], //Initial no order.
+        // Load data for the table's content from an Ajax source
+        "ajax": {
+            "url": "http://www.suvarnasiddhi.com/Datatables_Controller/delivery_pagination_list",
+            "type": "POST"
+            },
+        //Set column definition initialisation properties.
+        "columnDefs": [{ 
+            "targets": [ 0 ], //first column / numbering column
+            "orderable": false, //set not orderable
+        },
+        ],
+ 
+    });
+ 
+});
+</script>
+    
+</body>
+</html>
+    

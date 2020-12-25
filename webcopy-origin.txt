@@ -1,0 +1,260 @@
+Uri: http://www.suvarnasiddhi.com/
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\index.htm
+Content Type: text/html
+
+Uri: http://www.suvarnasiddhi.com/10.jpg
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\10.jpg
+Content Type: image/jpeg
+
+Uri: http://www.suvarnasiddhi.com/assets/images/ssLogo.png
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\images\ssLogo.png
+Content Type: image/png
+
+Uri: http://www.suvarnasiddhi.com/assets/css/bootstrap.min.css
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\css\bootstrap.min.css
+Content Type: text/css
+
+Uri: http://www.suvarnasiddhi.com/assets/css/universal.css
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\css\universal.css
+Content Type: text/css
+
+Uri: http://www.suvarnasiddhi.com/assets/css/component.css
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\css\component.css
+Content Type: text/css
+
+Uri: http://www.suvarnasiddhi.com/assets/css/animate.min.css
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\css\animate.min.css
+Content Type: text/css
+
+Uri: http://www.suvarnasiddhi.com/assets/css/font-awesome.min.css
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\css\font-awesome.min.css
+Content Type: text/css
+
+Uri: http://www.suvarnasiddhi.com/assets/css/suvarnasiddhi.css
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\css\suvarnasiddhi.css
+Content Type: text/css
+
+Uri: http://www.suvarnasiddhi.com/assets/css/jquery.toast.css
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\css\jquery.toast.css
+Content Type: text/css
+
+Uri: http://www.suvarnasiddhi.com/assets/fonts/flaticon.css
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\fonts\flaticon.css
+Content Type: text/css
+
+Uri: https://fonts.googleapis.com/css?family=Montserrat:400,700
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\css.css
+Content Type: text/css
+
+Uri: http://www.suvarnasiddhi.com/assets/css/select2.min.css
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\css\select2.min.css
+Content Type: text/css
+
+Uri: http://www.suvarnasiddhi.com/assets/css/jquery-ui.css
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\css\jquery-ui.css
+Content Type: text/css
+
+Uri: http://www.suvarnasiddhi.com/assets/css/dataTables.bootstrap.min.css
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\css\dataTables.bootstrap.min.css
+Content Type: text/css
+
+Uri: http://www.suvarnasiddhi.com/login
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\login.html
+Content Type: text/html
+
+Uri: http://www.suvarnasiddhi.com/register
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\register.html
+Content Type: text/html
+
+Uri: http://www.suvarnasiddhi.com/Limit_Trade
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\Limit_Trade.html
+Content Type: text/html
+
+Uri: http://www.suvarnasiddhi.com/faq
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\faq.html
+Content Type: text/html
+
+Uri: http://www.suvarnasiddhi.com/contact-us
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\contact-us.html
+Content Type: text/html
+
+Uri: http://www.suvarnasiddhi.com/privacy-policy
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\privacy-policy.html
+Content Type: text/html
+
+Uri: http://www.suvarnasiddhi.com/refund-policy
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\refund-policy.html
+Content Type: text/html
+
+Uri: http://www.suvarnasiddhi.com/terms-of-use
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\terms-of-use.html
+Content Type: text/html
+
+Uri: https://www.facebook.com/suvarnasiddhi/
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\suvarnasiddhi\index.htm
+Content Type: text/html
+
+Uri: https://www.instagram.com/suvarnasiddhi/
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\suvarnasiddhi\index-1.htm
+Content Type: text/html
+
+Uri: http://www.suvarnasiddhi.com/assets/images/sslogo2.png
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\images\sslogo2.png
+Content Type: image/png
+
+Uri: http://www.suvarnasiddhi.com/assets/js/jquery.min.js
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\js\jquery.min.js
+Content Type: application/javascript
+
+Uri: http://www.suvarnasiddhi.com/assets/js/jquery-ui.js
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\js\jquery-ui.js
+Content Type: application/javascript
+
+Uri: http://www.suvarnasiddhi.com/assets/js/bootstrap.min.js
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\js\bootstrap.min.js
+Content Type: application/javascript
+
+Uri: http://www.suvarnasiddhi.com/assets/js/bost/jquery.dataTables.min.js
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\js\bost\jquery.dataTables.min.js
+Content Type: application/javascript
+
+Uri: http://www.suvarnasiddhi.com/assets/js/bost/dataTables.bootstrap4.min.js
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\js\bost\dataTables.bootstrap4.min.js
+Content Type: application/javascript
+
+Uri: http://www.suvarnasiddhi.com/assets/js/jquery.validate.min.js
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\js\jquery.validate.min.js
+Content Type: application/javascript
+
+Uri: http://www.suvarnasiddhi.com/assets/js/additional-methods.min.js
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\js\additional-methods.min.js
+Content Type: application/javascript
+
+Uri: http://www.suvarnasiddhi.com/assets/js/main.js
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\js\main.js
+Content Type: application/javascript
+
+Uri: http://www.suvarnasiddhi.com/assets/js/device.min.js
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\js\device.min.js
+Content Type: application/javascript
+
+Uri: http://www.suvarnasiddhi.com/assets/js/wow.min.js
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\js\wow.min.js
+Content Type: application/javascript
+
+Uri: http://www.suvarnasiddhi.com/assets/js/universal.js
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\js\universal.js
+Content Type: application/javascript
+
+Uri: http://www.suvarnasiddhi.com/assets/js/select2.min.js
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\js\select2.min.js
+Content Type: application/javascript
+
+Uri: http://www.suvarnasiddhi.com/assets/js/sweetalert.min.js
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\js\sweetalert.min.js
+Content Type: application/javascript
+
+Uri: http://www.suvarnasiddhi.com/assets/js/jquery.smartmenus.js
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\js\jquery.smartmenus.js
+Content Type: application/javascript
+
+Uri: http://www.suvarnasiddhi.com/assets/js/jquery.shuffle.min.js
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\js\jquery.shuffle.min.js
+Content Type: application/javascript
+
+Uri: http://www.suvarnasiddhi.com/assets/fonts/glyphicons-halflings-regular.eot
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\fonts\glyphicons-halflings-regular.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: http://www.suvarnasiddhi.com/assets/fonts/glyphicons-halflings-regular-.eot
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\fonts\glyphicons-halflings-regular-.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: http://www.suvarnasiddhi.com/assets/fonts/glyphicons-halflings-regular.woff2
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\fonts\glyphicons-halflings-regular.woff2
+Content Type: font/woff2
+
+Uri: http://www.suvarnasiddhi.com/assets/fonts/glyphicons-halflings-regular.woff
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\fonts\glyphicons-halflings-regular.woff
+Content Type: font/woff
+
+Uri: http://www.suvarnasiddhi.com/assets/fonts/glyphicons-halflings-regular.ttf
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\fonts\glyphicons-halflings-regular.ttf
+Content Type: font/ttf
+
+Uri: http://www.suvarnasiddhi.com/assets/fonts/glyphicons-halflings-regular.svg
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\fonts\glyphicons-halflings-regular.svg
+Content Type: image/svg+xml
+
+Uri: http://www.suvarnasiddhi.com/assets/images/header/17.jpg
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\images\header\17.jpg
+Content Type: image/jpeg
+
+Uri: http://www.suvarnasiddhi.com/assets/images/header/13.jpg
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\images\header\13.jpg
+Content Type: image/jpeg
+
+Uri: http://www.suvarnasiddhi.com/assets/images/header/10.jpg
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\images\header\10.jpg
+Content Type: image/jpeg
+
+Uri: http://www.suvarnasiddhi.com/assets/fonts/fontawesome-webfont-v=4.7.0.eot
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\fonts\fontawesome-webfont-v=4.7.0.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: http://www.suvarnasiddhi.com/assets/fonts/fontawesome-webfont-.eot
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\fonts\fontawesome-webfont-.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: http://www.suvarnasiddhi.com/assets/fonts/fontawesome-webfont-v=4.7.0.woff2
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\fonts\fontawesome-webfont-v=4.7.0.woff2
+Content Type: font/woff2
+
+Uri: http://www.suvarnasiddhi.com/assets/fonts/fontawesome-webfont-v=4.7.0.woff
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\fonts\fontawesome-webfont-v=4.7.0.woff
+Content Type: font/woff
+
+Uri: http://www.suvarnasiddhi.com/assets/fonts/fontawesome-webfont-v=4.7.0.ttf
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\fonts\fontawesome-webfont-v=4.7.0.ttf
+Content Type: font/ttf
+
+Uri: http://www.suvarnasiddhi.com/assets/fonts/fontawesome-webfont-v=4.7.0.svg
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\fonts\fontawesome-webfont-v=4.7.0.svg
+Content Type: image/svg+xml
+
+Uri: http://www.suvarnasiddhi.com/assets/fonts/OptimusPrinceps.ttf
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\fonts\OptimusPrinceps.ttf
+Content Type: font/ttf
+
+Uri: http://www.suvarnasiddhi.com/assets/images/caratlane/bg-diwali.jpg
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\images\caratlane\bg-diwali.jpg
+Content Type: image/jpeg
+
+Uri: http://www.suvarnasiddhi.com/assets/images/caratlane/bg-diwali-2.jpg
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\images\caratlane\bg-diwali-2.jpg
+Content Type: image/jpeg
+
+Uri: http://www.suvarnasiddhi.com/assets/images/caratlane/diya-1.png
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\images\caratlane\diya-1.png
+Content Type: image/png
+
+Uri: http://www.suvarnasiddhi.com/assets/fonts/Flaticon.eot
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\fonts\Flaticon.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: http://www.suvarnasiddhi.com/assets/fonts/Flaticon-.eot
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\fonts\Flaticon-.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: http://www.suvarnasiddhi.com/assets/fonts/Flaticon.woff
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\fonts\Flaticon.woff
+Content Type: font/woff
+
+Uri: http://www.suvarnasiddhi.com/assets/fonts/Flaticon.ttf
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\fonts\Flaticon.ttf
+Content Type: font/ttf
+
+Uri: http://www.suvarnasiddhi.com/assets/fonts/Flaticon.svg
+File Name: C:\Downloaded Web Sites\www.suvarnasiddhi.com\assets\fonts\Flaticon.svg
+Content Type: image/svg+xml
+

@@ -1,0 +1,785 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	 <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<!--Responsive-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--SEO Start-->
+<title>Suvarnasiddhi| FAQ </title>
+<meta name="description" content="Suvarnasiddhi Buy, Sell, and Delivery Gold">
+<meta name="robots" content="">
+<meta name="author" content="">
+<!-- Common Meta Tags for Geo Region, Place and Latitude and Longitude. Malad retail outlet -->
+<meta name="geo.region" content="India">
+<meta name="geo.placename" content="Pune">
+<meta name="geo.position" content="#">
+<meta name="ICBM" content="#">
+<!--SEO END-->
+
+<!--Android Address bar Color-->
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#0e0c0b">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#0e0c0b">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#0e0c0b">
+
+<link rel="shortcut icon" type="image/x-icon" href="assets/images/ssLogo.png">
+<!-- Bootstrap Core CSS-->
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom CSS-->
+<link href="assets/css/universal.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="assets/css/component.css">
+<link rel="stylesheet" type="text/css" href="assets/css/animate.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+<link href="assets/css/suvarnasiddhi.css" rel="stylesheet" type="text/css">
+<link href="assets/css/jquery.toast.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="assets/fonts/flaticon.css">
+<link href="css.css?family=Montserrat:400,700" rel="stylesheet">
+<link href="assets/css/select2.min.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="assets/css/dataTables.bootstrap.min.css">
+ 
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+      
+  
+<!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-P5LDN3J');
+            
+  var BASE_URL='http://www.suvarnasiddhi.com/';
+  </script>
+  <!-- End Google Tag Manager -->
+
+  </head>	<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="top" ng-controller="MainCtrl">
+   <!-- Loader -->
+	<!--<div id="preloader">
+  <div id="status"></div>
+</div>-->
+<header> 
+  <!-- Navigation-->
+  <nav class="navbar navbar-universal navbar-custom navbar-fixed-top"> <!-- Navigation-->
+<div class="container">
+         <div class="rate_fixed_header" id="without_refresh_get">
+        <span class="buy_rates"> Gold Buy <i class="fa fa-inr"></i> 5069.80 gm </span>
+        <span class="sell_rates"> Gold Sell <i class="fa fa-inr"></i> 4562.82 gm </span>
+    </div>
+  <div class="navbar-header">
+    <button type="button" data-toggle="collapse" data-target=".navbar-main-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+    
+    <a style="font-size:24px;" href="index.htm" class="navbar-brand">
+    <!-- Text or Image logo-->
+    
+    <img src="assets/images/sslogo2.png" alt="suvarnasiddhi" class="logo">
+    <img src="assets/images/sslogo2.png" alt="suvarnasiddhi" class="logodark">
+    </a>
+        </div>
+  <div class="collapse navbar-collapse navbar-main-collapse">
+    <ul class="nav navbar-nav navbar-left">
+        <li class="hidden"><a href="index.htm#page-top"></a></li> 
+        <li><a href="#">About Us</a></li>
+        <!--<li><a href="partner-with-us.html">Partner With Us</a></li>-->
+      <!--  <li><a href="#">Join Us</a></li>-->
+        <li class="menu-divider visible-lg">&nbsp;</li>
+
+          
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+               
+                  </ul>
+  </div>
+ 
+</div>
+ </nav>
+</header> 
+<style>
+    .header_cover{
+    background: url(10.jpg);
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(7, 7, 7, 0.7); 
+  }
+</style>
+
+ 
+<div id="fixed_deposit" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">GOLD FIXED DEPOSIT</h4>
+      </div>
+      <div class="modal-body">
+          <div class="alert alert-success" id="fixed_deposit_success" style="display:none;"></div>
+          <div class="alert alert-danger" id="fixed_deposit_error" style="display:none;"></div>
+            <p class="wallets_csss">
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Notice</p>
+<p>Message:  Undefined variable: id</p>
+<p>Filename: layout/header.php</p>
+<p>Line Number: 80</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/i6vbmtrcw922/public_html/suvarnasiddhi.com/application/views/users/layout/header.php<br>
+			Line: 80<br>
+			Function: _error_handler			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/i6vbmtrcw922/public_html/suvarnasiddhi.com/application/views/users/layout/layout.php<br>
+			Line: 6<br>
+			Function: view			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/i6vbmtrcw922/public_html/suvarnasiddhi.com/application/core/MY_Controller.php<br>
+			Line: 14<br>
+			Function: view			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/i6vbmtrcw922/public_html/suvarnasiddhi.com/application/controllers/Users_controller.php<br>
+			Line: 47<br>
+			Function: layout_users			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/i6vbmtrcw922/public_html/suvarnasiddhi.com/index.php<br>
+			Line: 315<br>
+			Function: require_once			</p>
+
+		
+	
+
+</div>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Notice</p>
+<p>Message:  Trying to get property 'GOLD_BALANCE' of non-object</p>
+<p>Filename: layout/header.php</p>
+<p>Line Number: 80</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/i6vbmtrcw922/public_html/suvarnasiddhi.com/application/views/users/layout/header.php<br>
+			Line: 80<br>
+			Function: _error_handler			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/i6vbmtrcw922/public_html/suvarnasiddhi.com/application/views/users/layout/layout.php<br>
+			Line: 6<br>
+			Function: view			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/i6vbmtrcw922/public_html/suvarnasiddhi.com/application/core/MY_Controller.php<br>
+			Line: 14<br>
+			Function: view			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/i6vbmtrcw922/public_html/suvarnasiddhi.com/application/controllers/Users_controller.php<br>
+			Line: 47<br>
+			Function: layout_users			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /home/i6vbmtrcw922/public_html/suvarnasiddhi.com/index.php<br>
+			Line: 315<br>
+			Function: require_once			</p>
+
+		
+	
+
+</div><br><b>GOLD WALLET</b> 
+            <form method="post" id="fixed_deposit_inr_forms">
+              <div class="form-group">
+                  <label>Gold Amount</label>  
+                  <input type="number" id="gold_amount_fixed" class="form-control" name="gold_amount_fixed" value="Gold Amount">
+              </div> 
+               <div class="form-group">
+                  <label>Select Fixed Deposit Duration</label>   
+                  <select id="fixed_deposit_duration" name="fixed_deposit_duration" class="form-control">
+                      <option value="">Select Duration</option>
+                      <option value="6">6 Months 6% Interest</option> 
+                      <option value="9">9 Months 13.5% Interest</option> 
+                      <option value="12">12 Months 24% Interest</option>   
+                  </select>
+              </div>  
+              <div class="form-group">
+                  <button type="submit" name="sub" id="submit_fixed_deposit" class="btn btn-primary btn-block">  Submit Fixed Deposit </button>
+              </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5cdaa9e2d07d7e0c6393835d/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>	 <div class="small-header bg-img4 header_cover">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1>FAQ's</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="bg-dark2">
+  <div class="container">
+    <div class="row">
+      <div class="faq">
+        <div>
+          <ul>
+            <!-- 1st -->
+            <li>
+              <h4>What is Suvarna Siddhi?</h4>
+              <p> Suvarna Siddhi is an organised and transparent method of buying 24 carat gold in compliance with all applicable laws and regulations. Suvarna Siddhi is neither a financial product nor a deposit but a method of purchasing gold for the personal needs of the customer. Customer can buy the gold under this plan according to his wish. The customer has complete freedom to seek physical delivery of gold or bars anytime and on as many occasions as (s)he wants. Since it is not physically possible to deliver a fractional quantity of gold, minimum quantity for which the delivery is proposed to be made has been kept as low as 1 gram and in multiples of 1 gram. The gold on behalf of the customer would be purchased including GST as and when his/her clear funds are available. Gold in grams up to 4 decimal places shall be credited to the customer's account on receipt of funds.  </p>
+            </li>
+            <!-- 2nd -->
+            <li>
+              <h4>Is the gold associated with my accumulations kept in safe custody?</h4>
+              <p>The gold purchased on behalf of the customer shall be stored with a reputed custodian on a consolidated basis i.e. daily purchase across all the customers. An independent auditor/ trustee will confirm the balances with the custodian each quarter and reconcile the amounts with customer balances. </p>
+            </li>
+            <!-- 3rd -->
+            <li>
+              <h4>Where can I find the invoice for each order?</h4>
+              <p>An invoice is emailed to the customer after each transaction. It is also available in the order history section on the Company's website as well as the distributor platform. </p>
+            </li>
+            <!-- 4th -->
+            <li>
+              <h4>How do I sell my gold?</h4>
+              <p>The Company will provide a sell price quote on its website as well as distributor platforms. Customers can choose to sell any amount starting with a minimum of Re. 1 to a maximum of the amount of gold that they own. Proceeds will be sent within 2 days to the customer's bank account after deducting any applicable transaction charges(which will be disclosed in advance). The sell quote may be temporarily unavailable in the unlikely event of a disruption in the bullion market. </p>
+            </li>
+            <!-- 5th -->
+            <li>
+              <h4>How can I withdraw my gold?</h4>
+              <ul class="disc-list" style="margin-bottom: 30px">
+              <li> You can request for all or part of your gold holding, between 1 gm and multiples thereof </li>
+                <li>You can select the quantity and denomination of the gold you wish to withdraw from the available options of coins </li>
+                <li> Each coin will have different making charges, based on the weight and design of the coin </li>
+                <li>You must confirm the transaction by paying the additional making and delivery charge. </li>
+                <li>Your gold product will be delivered at your notified address by a logistics provider arranged by the Company, and you will receive a confirmation on your registered mobile number. </li>
+                <li>You will receive a dispatch confirmation and the waybill number of the courier company which will allow you track your package online. </li>
+              </ul>
+            </li>
+            <!--6th -->
+            <li>
+              <h4>What is the eligibility criteria for Suvarna Siddhi?</h4>
+              <p> Any resident Indian can enroll for Suvarna Siddhi. </p>
+            </li>
+            <!--7th -->
+            <li>
+              <h4>What is the Purity of Gold offered under Suvarna Siddhi?</h4>
+              <p> Suvarna Siddhi  offers 24 Karat Gold of 995 purity (99.5% pure). </p>
+            </li>
+            <!--8th -->
+            <li>
+              <h4>What are the various tenures available under Suvarna Siddhi?</h4>
+              <p> Customer is not obligated to make any fixed or periodic payments. </p>
+            </li>
+            <!--9th -->
+            <li>
+              <h4>Is it possible to store my withdrawn gold coins in safe custody and have them delivered later?</h4>
+              <p> Once you place a delivery request, you have to accept the delivery made to you. It cannot be made at a later date. </p>
+            </li>
+            <!--10th -->
+            <li>
+              <h4>What is the minimum & maximum amount for this plan?</h4>
+              <p>The minimum amount of purchase is Re. 1. There is no limit on the maximum amount as long as KYC requirements are complied with. </p>
+            </li>
+            <!--11th -->
+            <li>
+              <h4>How can I get my holding statement?</h4>
+              <p> An online statement will be available at all times. The holding statement will be sent to the customers through email if requested. </p>
+            </li>
+            <!--12th -->
+            <li>
+              <h4>Can I have a joint account for this plan?</h4>
+              <p> No, you cannot have a joint account for Suvarna Siddhi. </p>
+            </li>
+            <!--13th -->
+            <li>
+              <h4>Is nomination mandatory for Suvarna Siddhi?</h4>
+              <p> Nomination norms will be followed as per the distributors standards for their product. </p>
+            </li>
+            <!--14th -->
+            <li>
+              <h4>Can I change my delivery address?</h4>
+              <p> Yes. Verification of address change will be as per the norms established by the distributor. </p>
+            </li>
+            <!--15th -->
+            <li>
+              <h4>Where is delivery of Gold available?</h4>
+              <p> In case of delivery of coin/ bar, the shipment will be mandatorily delivered to the registered address of the customer as per Suvarna Siddhi records. Certain approved jewellers and distributor branches may also be used for delivery after verifying the identity proof of the customer. The Company will maintain a list of serviceable pin codes and prior to making any purchase the customer will be informed whether their pin code is serviceable by the Company. . </p>
+            </li>
+            <!--16th -->
+            <li>
+              <h4>Are there any charges for delivery of gold?</h4>
+              <p> Yes, customer has to pay the minting/ making charges, delivery charges and applicable taxes. All coins are hallmarked to certify purity and delivered in tamper proof packaging. Making and delivery charges are listed in the table below: </p>
+              <table class="table table-bordered text-center">
+                <thead>
+                  <tr>
+                    <th>Coin Weight (gms)</th>
+                    <th>Minting Charge (<i class="fa fa-inr" aria-hidden="true"></i>)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>349</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>399</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>499</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>699</td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+            <!--17th -->
+            <li>
+              <h4>At what price is gold sold/ bought from customers?</h4>
+              <p>The Company will publish a live buy-sell quote for customers which will be derived from the wholesale bullion market plus a commission to cover operating costs. The actual purchase price paid by the customer will always be transparently published so the customer has a chance to compare with all other sources before entering into a transaction. </p>
+            </li>
+            <!--18th -->
+            <li>
+              <h4>What are the licenses applicable?</h4>
+              <p>Other than shops and establishment and a few normal approvals covering a commercial enterprise, Suvarna Siddhi will not need specific licenses at the current moment. </p>
+            </li>
+            <!--19th -->
+            <li>
+              <h4>Who will insure physical vault?</h4>
+              <p> The secure storage provider takes out a comprehensive insurance policy and includes that in their charges to the Company. The secure logistics provider takes out insurance for the period in transit, when the gold leaves the vault. If required, the Company may take out an additional insurance policy as well to cover specific risks. </p>
+            </li>
+            <!--20th -->
+            <li>
+              <h4>Who will manage consumer complaints?</h4>
+              <p> Distributors will provide the first level of customer support. The Company will be available to satisfy any issues/ questions that may be escalated. </p>
+            </li>
+            <!--21st -->
+            <li>
+              <h4>What is the role of the “Security Trustee”?</h4>
+              <p>The Security Trustee is entitled to act on behalf of the customers and ensure that the interests of the customers are protected. The security Trustee will have a charge on the gold associated with accumulations held by the customers. </p>
+            </li>
+            <!--22nd -->
+            <li>
+              <h4>Is there any regulator or Grievance redressal mechanism?</h4>
+              <p>Suvarna Siddhi is neither a Collective Investment Scheme nor a Deposit. Thus this plan doesn’t fall under the purview of SEBI or RBI. Hence there is no regulator for this product offering. To ensure that the customer interest is of foremost importance, a Security Trustee has been appointed for Suvarna Siddhi. For any grievances the customer can approach the Security Trustee. </p>
+            </li>
+            <!--23rd -->
+            <li>
+              <h4>Is the gold associated with my accumulations kept in safe custody?</h4>
+              <p> Yes, the gold associated with the accumulations credited in your account is kept in safe custody with a Custodian in accordance with the terms of offer mentioned in the product brochure. Only reputed firms such as Sequel Logistics and Brinks will be used as a custodian. </p>
+            </li>
+            <!--24th -->
+            <li>
+              <h4>What will happen to the gold associated with accumulations in my account, in the unlikely event of the Company going into liquidation?</h4>
+              <p>The gold associated with the accumulations in your account is separate from the other assets of the Company. An independent trustee appointed by the Company will act for and on behalf of the customers. The gold purchased by the Company associated with the accumulations in customer accounts is transferred to the Custodian appointed by the Company for the product. When the customer asks for delivery, the requisite quantity of gold will be removed from the Custodian and delivered to the customer through a reputed courier service. Since the Security Trustee has a charge over the gold over other commercial creditors till the time of fulfilment and the gold is separate from the other assets of the Company, any unlikely adverse event happening to Company should not affect the gold associated with the accumulations in your account. Further, the title of the gold clearly rests with the customer and the physical gold stored with the Custodian on account of Suvarna Siddhi customers is not an asset of the Company in any way. </p>
+            </li>   
+            <!--25th -->
+            <li>
+              <h4>Which are the agencies which certify Gold in India?</h4>
+              <p> Government of India has identified Bureau of Indian Standard as the sole agency in India to operate the BIS Hallmarking Scheme. The BIS Hallmarking Scheme has been aligned with International criteria on hallmarking (Vienna Convention 1972). A Hallmark, consists of five components i.e. BIS Mark, the Fineness number (corresponding to given cartage), Assaying and Hallmarking Centre's Mark, Jeweller's identification Mark and year of Marking denoted by a code letter and decided by BIS (e.g. code letter `A' was approved by BIS for year 2000, `B' being used for the year 2001 and `C' for 2002 and 'J' for 2008). The marking is done either using punches or laser marking machine. </p>
+              <p> Some manufacturers also issue Assay Certification which can be obtained through Assay Offices. Assay offices are institutions set up to assay (test the purity of) precious metals, in order to protect consumers. All coins and jewellery redeemed through Suvarna Siddhi shall be BIS certified. </p>
+            </li>
+            <!--26th -->
+            <li>
+              <h4>Is there any lock-in period for this plan?</h4>
+              <p> Yes. There is a lock-in period of 1-3 days from the date of each purchase, depending on how long it takes the Company to realize payment from the customer. The purpose of SafeGold is not to promote speculative trading in gold and therefore a lock-in period helps to curb speculation. Fulfillment or sale of gold grams shall not be permitted during the lock-in period. </p>
+            </li>
+            <!--27th -->
+            <li>
+              <h4>What is the benchmark for the Price of Suvarna Siddhi? Can MCX be taken as a benchmark?</h4>
+              <p>Yes. There is a lock-in period of 1-3 days from the date of each purchase, depending on how long it takes the Company to realise payment from the customer. The purpose of Suvarna Siddhi is not to promote speculative trading in gold and therefore a lock-in period helps to curb speculation. Fulfilment or sale of gold grams shall not be permitted during the lock-in period. </p>   
+            </li>   
+            <!--28th -->
+      
+            <!--29th -->
+            <li>
+              <h4>Will the customer need to show any identity proof at the time of taking the physical gold coins?</h4>
+              <p> The customer will need to arrange for an identity proof to be available at the registered address at the time of taking delivery . </p>
+            </li>
+            <!--30th -->
+            <li>
+              <h4>Can someone else redeem the physical gold coins on my behalf?</h4>
+              <p>Only in case of death of the applicant, the legal heir will be able to collect the gold coins by showing the proof of identity of along with the original / notarised copy of the death certificate and proof that the person is the legal heir of the applicant. </p>
+            </li>
+            <!--31st -->
+            <li>
+              <h4>What if the customer dies during the tenure of the plan?</h4>
+              <p> The legal heir can place a fulfillment request for delivery or sale along with proving proof of being an heir. </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>	  <footer> 
+  <!-- footer small-->
+  <div class=" footer-small bg-dark text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <p data-wow-iteration="999" data-wow-duration="3s" class="wow flash"><a href="#page-top" class="page-scroll"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></a></p>
+          <p style="text-align:center">
+              <img src="assets/images/sslogo2.png" alt="safeGold-logo" width="180" style="height: 88px;width: 80px;" class="logo">
+        <!-- SUVARNASIDDHI-->
+            </p>
+          <hr>
+          <ul class="list-inline">
+                <li><a href="contact-us.html">Contact US</a></li>
+              <li style="border:0px"><a href="privacy-policy.html">PRIVACY POLICY </a></li>
+              <li><a href="refund-policy.html"> REFUND POLICY </a></li>
+           
+              <li><a href="terms-of-use.html"> TERMS OF USE </a></li>
+              <li><a href="faq.html"> FAQ </a></li>
+            <!--<li><a href="#"> SITEMAP </a></li>-->
+          </ul>
+           <ul class="list-inline">
+               <li style="border-left: none;" class="facebook-social"><a href="suvarnasiddhi/index.htm" target="_blank"><i style="color:white;" class="fa fa-facebook"></i> </a></li>  
+               <li style="border-left: none;" class="twitters"><a href="https://twitter.com/suvarnasiddhi" target="_blank"><i style="color:white;" class="fa fa-twitter"></i> </a></li>  
+               <li style="border-left: none;" class="instragram"><a href="suvarnasiddhi/index-1.htm" target="_blank"><i style="color:white;" class="fa fa-instagram"></i> </a></li>  
+               
+          </ul>
+          <p class="small" style="margin-bottom:5px">Product By SUVARNASANKALP PRIVATE LIMITED</p>
+         
+        </div>
+      </div>
+    <!--  <div class="row patner-list">
+          <div class="col-xs-6 text-center"><img src="http://www.suvarnasiddhi.com/assets/images/logos/idbi.png" alt="SafeGold-IDBI" width="150" height="43"></div>
+        <div class="col-xs-6 text-center"><img src="http://www.suvarnasiddhi.com/assets/images/logos/brinks.png" alt="SafeGold-BRINKS " width="150" height="43"></div>
+        
+      </div>-->
+    </div>
+  </div>
+</footer>
+ 
+<!--footer end--> 
+<!-- jQuery--> 
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="assets/js/jquery.min.js"></script>
+ <script src="assets/js/jquery-ui.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bost/jquery.dataTables.min.js"></script>
+<script src="assets/js/bost/dataTables.bootstrap4.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!-- Plugin JavaScript--> 
+<script src="assets/js/jquery.validate.min.js" type="text/javascript"></script>
+<script src="assets/js/additional-methods.min.js" type="text/javascript"></script>
+<script src="assets/js/main.js" type="text/javascript"></script>
+<script src="assets/js/device.min.js" defer=""></script>  
+
+<script src="assets/js/wow.min.js"></script> 
+<script src="assets/js/universal.js"></script> 
+<script src="assets/js/select2.min.js" defer=""></script>
+<script src="assets/js/sweetalert.min.js" defer=""></script>
+
+<script src="assets/js/jquery.smartmenus.js" async=""></script>
+<!--<script src="/assets/js/jquery.easing.min.js" defer></script>--> 
+<script src="assets/js/jquery.shuffle.min.js"></script> 
+<!--<script src="/assets/js/jquery.placeholder.min.js"></script>-->
+<!--<script src="/assets/js/jquery.swipebox.min.js"></script> -->
+<!-- <script src="/assets/js/smoothscroll.min.js"></script> -->
+<!--<script src="/assets/js/jquery.parallax.min.js"></script> -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b02a6de899","applicationID":"98372222","transactionName":"blQGMEdQVhEABxcLX1ceJQdBWFcMTiwMD1V6XgoQR15UDgQWIwVVTX0FClFYVgUxBQQH","queueTime":0,"applicationTime":24,"atts":"QhMFRg9KRR8=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<script>
+   // var j = jQuery.noConflict();  
+           var maxBirthdayDate = new Date();
+maxBirthdayDate.setFullYear( maxBirthdayDate.getFullYear() - 10,11,31)
+    $(document).ready(function() {
+    $("#CRATED_DATE_NFT").datepicker({
+        changeMonth: true, 
+       changeYear: true
+       
+    });
+  });
+
+</script>
+
+<script>
+var table;
+$(document).ready(function() {
+    table = $('#deposit_INR_History').DataTable({ 
+	"pageLength": 50,
+	"bLengthChange": false,
+        "processing": true, //Feature control the processing indicator.
+        "serverSide": true, //Feature control DataTables' server-side processing mode.
+        "order": [], //Initial no order.
+        // Load data for the table's content from an Ajax source
+        "ajax": {
+            "url": "http://www.suvarnasiddhi.com/Datatables_Controller/buy_trnasction_history",
+            "type": "POST"
+        },
+        //Set column definition initialisation properties.
+        "columnDefs": [{ 
+            "targets": [ 0 ], //first column / numbering column
+            "orderable": false, //set not orderable
+        },
+        ],
+ 
+    });
+ 
+});
+
+$(document).ready(function() {
+    table = $('#trade_buy_history').DataTable({ 
+	"pageLength": 50,
+	"bLengthChange": false,
+        "processing": true, //Feature control the processing indicator.
+        "serverSide": true, //Feature control DataTables' server-side processing mode.
+        "order": [], //Initial no order.
+        // Load data for the table's content from an Ajax source
+        "ajax": {
+            "url": "http://www.suvarnasiddhi.com/Datatables_Controller/trade_trnasction_history_buy",
+            "type": "POST"
+        },
+        //Set column definition initialisation properties.
+        "columnDefs": [{ 
+            "targets": [ 0 ], //first column / numbering column
+            "orderable": false, //set not orderable
+        },
+        ],
+ 
+    });
+
+table = $('#trade_sell_history').DataTable({ 
+	"pageLength": 50,
+	"bLengthChange": false,
+        "processing": true, //Feature control the processing indicator.
+        "serverSide": true, //Feature control DataTables' server-side processing mode.
+        "order": [], //Initial no order.
+        // Load data for the table's content from an Ajax source
+        "ajax": {
+            "url": "http://www.suvarnasiddhi.com/Datatables_Controller/trade_trnasction_history_sell",
+            "type": "POST"
+        },
+        //Set column definition initialisation properties.
+        "columnDefs": [{ 
+            "targets": [ 0 ], //first column / numbering column
+            "orderable": false, //set not orderable
+        },
+        ],
+ 
+    });
+
+
+table = $('#withdraws_historys').DataTable({ 
+	"pageLength": 50,
+	"bLengthChange": false,
+        "processing": true, //Feature control the processing indicator.
+        "serverSide": true, //Feature control DataTables' server-side processing mode.
+        "order": [], //Initial no order.
+        // Load data for the table's content from an Ajax source
+        "ajax": {
+            "url": "http://www.suvarnasiddhi.com/Datatables_Controller/withdraws_trnasction_history",
+            "type": "POST"
+        },
+        //Set column definition initialisation properties.
+        "columnDefs": [{ 
+            "targets": [ 0 ], //first column / numbering column
+            "orderable": false, //set not orderable
+        },
+        ],
+ 
+    });
+
+table = $('#referral_users_lists').DataTable({ 
+	"pageLength": 50,
+	"bLengthChange": false,
+        "processing": true, //Feature control the processing indicator.
+        "serverSide": true, //Feature control DataTables' server-side processing mode.
+        "order": [], //Initial no order.
+        // Load data for the table's content from an Ajax source
+        "ajax": {
+            "url": "http://www.suvarnasiddhi.com/Datatables_Controller/referral_users_list",
+            "type": "POST"
+        },
+        //Set column definition initialisation properties.
+        "columnDefs": [{ 
+            "targets": [ 0 ], //first column / numbering column
+            "orderable": false, //set not orderable
+        },
+        ],
+ 
+    });
+
+table = $('#referral_income_tables').DataTable({ 
+	"pageLength": 50,
+	"bLengthChange": false,
+        "processing": true, //Feature control the processing indicator.
+        "serverSide": true, //Feature control DataTables' server-side processing mode.
+        "order": [], //Initial no order.
+        // Load data for the table's content from an Ajax source
+        "ajax": {
+            "url": "http://www.suvarnasiddhi.com/Datatables_Controller/referral_income_users",
+            "type": "POST"
+            },
+        //Set column definition initialisation properties.
+        "columnDefs": [{ 
+            "targets": [ 0 ], //first column / numbering column
+            "orderable": false, //set not orderable
+        },
+        ],
+ 
+    });
+
+table = $('#fixed_deposit_table').DataTable({ 
+	"pageLength": 50,
+	"bLengthChange": false,
+        "processing": true, //Feature control the processing indicator.
+        "serverSide": true, //Feature control DataTables' server-side processing mode.
+        "order": [], //Initial no order.
+        // Load data for the table's content from an Ajax source
+        "ajax": {
+            "url": "http://www.suvarnasiddhi.com/Datatables_Controller/fixed_deposit_history_shwing",
+            "type": "POST"
+            },
+        //Set column definition initialisation properties.
+        "columnDefs": [{ 
+            "targets": [ 0 ], //first column / numbering column
+            "orderable": false, //set not orderable
+        },
+        ],
+ 
+    });
+
+
+
+table = $('#gold_payout_amount').DataTable({ 
+	"pageLength": 50,
+	"bLengthChange": false,
+        "processing": true, //Feature control the processing indicator.
+        "serverSide": true, //Feature control DataTables' server-side processing mode.
+        "order": [], //Initial no order.
+        // Load data for the table's content from an Ajax source
+        "ajax": {
+            "url": "http://www.suvarnasiddhi.com/Datatables_Controller/fixed_deposit_payout_paging",
+            "type": "POST"
+            },
+        //Set column definition initialisation properties.
+        "columnDefs": [{ 
+            "targets": [ 0 ], //first column / numbering column
+            "orderable": false, //set not orderable
+        },
+        ],
+ 
+    });
+
+table = $('#delivery_page_table').DataTable({ 
+	"pageLength": 50,
+	"bLengthChange": false,
+        "processing": true, //Feature control the processing indicator.
+        "serverSide": true, //Feature control DataTables' server-side processing mode.
+        "order": [], //Initial no order.
+        // Load data for the table's content from an Ajax source
+        "ajax": {
+            "url": "http://www.suvarnasiddhi.com/Datatables_Controller/delivery_pagination_list",
+            "type": "POST"
+            },
+        //Set column definition initialisation properties.
+        "columnDefs": [{ 
+            "targets": [ 0 ], //first column / numbering column
+            "orderable": false, //set not orderable
+        },
+        ],
+ 
+    });
+ 
+});
+</script>
+    
+</body>
+</html>
+    
